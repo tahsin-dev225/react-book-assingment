@@ -10,6 +10,7 @@ import Home from './Component/Home/Home.jsx';
 import ListedBooks from './Component/ListedBooks/ListedBooks.jsx';
 import PageToRead from './Component/PageToRead/PageToRead.jsx';
 import BookDetails from './Component/BookDetails/BookDetails.jsx';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,8 @@ const router = createBrowserRouter([
       },
       {
         path:'/listedBooks',
-        element:<ListedBooks></ListedBooks>
+        element:<ListedBooks></ListedBooks>,
+        // loader: ()=> fetch('../Books.json')
       },
       {
         path:'/pageToRead',
@@ -38,6 +40,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} ></RouterProvider>
+    <HelmetProvider>
+      <RouterProvider router={router} ></RouterProvider>
+    </HelmetProvider>
   </StrictMode>,
 )

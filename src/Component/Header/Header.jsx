@@ -5,7 +5,7 @@ const Header = () => {
 
     const links =<>
         <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/listedBooks'>Listed Books</NavLink></li>
+        <li className="mx-5"><NavLink to='/listedBooks'>Listed Books</NavLink></li>
         <li><NavLink to='/pageToRead'>Page To Read</NavLink></li>
     </>
 
@@ -40,8 +40,8 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Sing in</a>
-                    <a className="btn">Sing up</a>
+                    <a className="btn px-7  text-white mr-2 font-semibold  bg-[#23BE0A]">Sing in</a>
+                    <a className="btn px-7  text-white font-semibold  bg-[#59C6D2]">Sing up</a>
                 </div>
             </div>
         </div>
